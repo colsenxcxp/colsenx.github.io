@@ -26,4 +26,150 @@
     gtag('config', 'G-XXXXXXX');
   </script>
 
-  <styl
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+    img.logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: #ffb347;
+      font-size: 2.5rem;
+    }
+    p {
+      color: #ccc;
+    }
+    .button {
+      background-color: #ffb347;
+      color: black;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1.5rem;
+      box-shadow: 0 0 12px #ffb347;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.05);
+    }
+    .contract-box {
+      background: #1e1e1e;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      word-break: break-all;
+      position: relative;
+    }
+    .contract-box button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 8px;
+      background: #ffb347;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .socials {
+      margin-top: 2rem;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #ffb347;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .qr {
+      margin-top: 2rem;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+    .tokenomics, .roadmap {
+      margin-top: 3rem;
+    }
+    .tokenomics ul, .roadmap ul {
+      list-style: none;
+      padding: 0;
+      color: #ccc;
+    }
+    .tokenomics h2, .roadmap h2 {
+      color: #ffb347;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="ColsenX Logo" class="logo" />
+    <h1>ColsenX (CXP)</h1>
+    <p>Web3 for lifestyle, trading, travel, and creators.</p>
+
+    <a class="button" href="https://pancakeswap.finance/swap?outputCurrency=0x1b674625c62bd3571a36e0705652dcd8c840b260" target="_blank">
+      Buy on PancakeSwap
+    </a>
+
+    <div class="contract-box" id="contractBox">
+      BSC Contract: 0x1b674625c62bd3571a36e0705652dcd8c840b260
+      <button onclick="copyContract()">Copy</button>
+    </div>
+
+    <div class="socials">
+      <a href="https://t.me/ColsenXbot" target="_blank">Telegram</a>
+      <a href="https://twitter.com/ColsenX" target="_blank">Twitter</a>
+    </div>
+
+    <div class="qr">
+      <p>Scan to view in Trust Wallet</p>
+      <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://pancakeswap.finance/swap?outputCurrency=0x1b674625c62bd3571a36e0705652dcd8c840b260" alt="QR Code">
+    </div>
+
+    <iframe src="https://www.geckoterminal.com/bsc/pools/0x1b4454865143610Fbf51B1cf385Ab58047F25c23?embed=1" title="CXP Chart"></iframe>
+
+    <div class="tokenomics">
+      <h2>Tokenomics</h2>
+      <ul>
+        <li>Total Supply: 30,000,000 CXP</li>
+        <li>10% Team • 40% Liquidity • 30% Community • 20% Marketing</li>
+      </ul>
+    </div>
+
+    <div class="roadmap">
+      <h2>Roadmap</h2>
+      <ul>
+        <li>✅ Launch CXP on BSC + Polygon</li>
+        <li>✅ PancakeSwap Pool & Verified Contract</li>
+        <li>🚀 Telegram Bot Alerts + Price Tracking</li>
+        <li>📈 CEX Listings (Bitget/Bybit target)</li>
+        <li>🌍 Partnerships & Utility Expansion</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function copyContract() {
+      const text = "0x1b674625c62bd3571a36e0705652dcd8c840b260";
+      navigator.clipboard.writeText(text);
+      alert("Contract copied to clipboard!");
+    }
+  </script>
+</body>
+</html>
