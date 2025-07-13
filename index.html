@@ -2,145 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ColsenX (USDT/CXP)</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColsenX (CXP) Whitepaper</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
       color: #111;
     }
-
-    header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
     }
-
-    .logo {
-      font-size: 32px;
-      font-weight: 700;
-      color: #111;
+    h2 {
+      font-size: 1.5em;
+      margin-top: 1.5em;
     }
-
-    .btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px 16px;
-      margin: 5px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .connect-btn {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-    }
-
-    .buy-btn {
-      background-color: #FF8C00;
-      color: white;
-      text-decoration: none;
-    }
-
-    .price {
-      font-size: 14px;
-      color: #CD7F32; /* Bronze gold */
-      margin: 10px 0 20px;
-    }
-
-    .chart-container {
+    table {
       width: 100%;
-      max-width: 900px;
-      margin: 0 auto 40px;
+      border-collapse: collapse;
+      margin-top: 1em;
     }
-
-    .chart-placeholder {
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 40px;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 16px;
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
     }
-
-    .social-links {
-      margin-top: 20px;
+    a {
+      color: #0066cc;
     }
-
-    .social-links a {
-      color: #1DA1F2;
-      margin: 0 10px;
-      font-size: 14px;
-      text-decoration: none;
+    iframe {
+      background-color: #111;
     }
-
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      color: #007BFF;
-      font-size: 14px;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
+  <h1>ColsenX (CXP) Whitepaper</h1>
+  <p><strong>Version:</strong> 1.0<br>
+     <strong>Network:</strong> Binance Smart Chain (BEP-20)<br>
+     <strong>Token Symbol:</strong> CXP<br>
+     <strong>Contract Address:</strong> 0x1B4454865143610Fbf51B1cf385Ab58047F25c23<br>
+     <strong>Total Supply:</strong> 30,000,000 CXP<br>
+     <strong>Decimals:</strong> 10<br>
+     <strong>Date Published:</strong> July 2025
+  </p>
 
-  <header>
-    <div class="logo">ColsenX (USDT/CXP)</div>
-    <button class="btn connect-btn" onclick="connectWallet()">Connect Wallet</button>
-  </header>
+  <h2>1. Introduction</h2>
+  <p>ColsenX (CXP) is a multi-purpose Web3 utility token launched on Binance Smart Chain (BSC). Designed for use in lifestyle, finance, and creator-focused applications, CXP enables decentralized access to payments, trading, and community growth.</p>
 
-  <main style="text-align: center; padding: 30px 20px;">
-    <p class="price">Current Price: $0.04277 | +60.65%</p>
+  <h2>2. Vision and Mission</h2>
+  <p><strong>Vision:</strong> To create a trusted Web3 token that bridges lifestyle, finance, and creator tools for real-world daily use.</p>
+  <p><strong>Mission:</strong></p>
+  <ul>
+    <li>Launch a secure and accessible token on BSC</li>
+    <li>Enable CXP for swaps, payments, and tipping</li>
+    <li>Grow a self-sustaining ecosystem for traders and creators</li>
+  </ul>
 
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn buy-btn">
-      Buy USDT/CXP on PancakeSwap
-    </a>
+  <h2>3. Key Utilities</h2>
+  <ul>
+    <li>💱 DEX Trading via PancakeSwap</li>
+    <li>💼 ColsenLite App Integration</li>
+    <li>💸 Rewards and Airdrops</li>
+    <li>🧾 Fast BSC-based Transactions</li>
+    <li>📲 Real-time Telegram Bot Alerts</li>
+  </ul>
 
-    <div class="chart-container">
-      <div class="chart-placeholder">
-        Live Chart: USDT/CXP (Dark Mode)<br/><br/>
-        TradingView or DEXTools embed not yet supported for this token directly.
-      </div>
-    </div>
+  <h2>4. Smart Contract</h2>
+  <p>Contract is verified on <a href="https://bscscan.com/address/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank">BscScan</a>. The source code is clean, with no minting, freezing, or honeypot risks.</p>
 
-    <div class="social-links">
-      <a href="https://x.com/ColsenX" target="_blank">Twitter</a>
-      <a href="https://t.me/ColsenX" target="_blank">Telegram</a>
-      <a href="mailto:support@colsenx.com">Email Us</a>
-    </div>
-  </main>
+  <h2>5. Tokenomics</h2>
+  <table>
+    <tr><th>Allocation</th><th>Percentage</th><th>Use</th></tr>
+    <tr><td>Liquidity & Circulation</td><td>45%</td><td>PancakeSwap & holders</td></tr>
+    <tr><td>Development Fund</td><td>20%</td><td>App, bots, platform updates</td></tr>
+    <tr><td>Ecosystem Rewards</td><td>15%</td><td>Airdrops, staking, LP support</td></tr>
+    <tr><td>Team (Locked)</td><td>10%</td><td>24-month vesting</td></tr>
+    <tr><td>Community Growth</td><td>10%</td><td>Marketing, contests, incentives</td></tr>
+  </table>
 
-  <footer>
-    © 2025 ColsenX. All rights reserved.
-  </footer>
+  <h2>6. Ecosystem</h2>
+  <p><strong>ColsenLite Wallet:</strong> A lightweight mobile app that supports CXP/USDT trading, swaps, and secure storage with PIN/Biometric login.</p>
+  <p><strong>Telegram Bot:</strong> Sends buy/sell alerts for transparency and hype in the CXP community.</p>
 
-  <!-- Wallet Connect Script -->
-  <script>
-    async function connectWallet() {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          alert('Connected: ' + accounts[0]);
-        } catch (error) {
-          alert('Connection error: ' + error.message);
-        }
-      } else {
-        alert('MetaMask not detected. Please install it.');
-      }
-    }
-  </script>
-</body>
-</html>
+  <h2>7. Roadmap</h2>
+  <ul>
+    <li>✅ Q2 2025: Launch of contract, liquidity pool</li>
+    <li>✅ Q3 2025: Token verification, Telegram int
