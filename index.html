@@ -4,60 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ColsenX (CXP)</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background-color: #000;
+      background-color: #0a0a0a;
       color: #d4af37;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       text-align: center;
     }
-    .container {
-      max-width: 600px;
-      padding: 2rem;
+    header {
+      padding: 2rem 1rem;
     }
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
+    .contract-address {
+      margin-top: 1rem;
+      font-size: 1rem;
+      word-break: break-word;
+      color: #aaa;
     }
-    a {
+    .btn-swap {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
       background-color: #d4af37;
       color: #000;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      border-radius: 8px;
     }
-    a:hover {
-      background-color: #bfa234;
+    .btn-swap:hover {
+      background-color: #b99630;
     }
-    .contract {
+    .logo {
+      width: 120px;
+      margin: 1rem auto;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
       font-size: 0.9rem;
-      word-break: break-word;
-      margin-top: 1.5rem;
-      opacity: 0.85;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <img src="logo.png" alt="ColsenX Logo" class="logo" />
     <h1>ColsenX (CXP)</h1>
-    <p>Trade the future of finance on Binance Smart Chain.</p>
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">Buy on PancakeSwap</a>
-    <div class="contract">
-      Contract Address:<br />
+    <p class="contract-address">
+      Contract: <br />
       <code>0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code>
-    </div>
-  </div>
+    </p>
+    <a class="btn-swap" href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">
+      Buy on PancakeSwap
+    </a>
+  </header>
+
+  <footer>
+    &copy; 2025 ColsenX. All rights reserved.
+  </footer>
 </body>
 </html>
