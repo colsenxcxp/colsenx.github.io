@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ColsenX (CXP)</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -27,61 +26,31 @@
       color: #111;
     }
 
-    .btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px 16px;
-      margin: 5px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .connect-btn {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-    }
-
-    .buy-btn {
-      background-color: #FF8C00;
-      color: white;
-      text-decoration: none;
+    main {
+      padding: 40px 20px;
+      text-align: center;
     }
 
     .price {
       font-size: 14px;
       color: #CD7F32; /* Bronze gold */
-      margin: 10px 0 20px;
+      margin-bottom: 20px;
     }
 
-    .chart-container {
+    iframe {
+      border: none;
       width: 100%;
       max-width: 900px;
+      height: 400px;
       margin: 0 auto 40px;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      color: #1DA1F2;
-      margin: 0 10px;
-      font-size: 14px;
-      text-decoration: none;
+      display: block;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: #fff;
-      color: #007BFF;
+      color: #007BFF; /* Blue */
       font-size: 14px;
     }
   </style>
@@ -90,62 +59,21 @@
 
   <header>
     <div class="logo">ColsenX (CXP)</div>
-    <button class="btn connect-btn" onclick="connectWallet()">Connect Wallet</button>
   </header>
 
-  <main style="text-align: center; padding: 30px 20px;">
+  <main>
     <p class="price">Current Price: $0.04277 | +60.65%</p>
 
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn buy-btn">
-      Buy on PancakeSwap
-    </a>
-
-    <div class="chart-container">
-      <div id="tradingview_chart" style="height: 400px;"></div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://x.com/ColsenX" target="_blank">Twitter</a>
-      <a href="https://t.me/ColsenX" target="_blank">Telegram</a>
-      <a href="mailto:support@colsenx.com">Email Us</a>
-    </div>
+    <!-- Dark Theme Chart (DEXTools) -->
+    <iframe 
+      src="https://www.dextools.io/widget-chart/en/polygon/pe-light/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark"
+      allowfullscreen>
+    </iframe>
   </main>
 
   <footer>
     © 2025 ColsenX. All rights reserved.
   </footer>
 
-  <!-- TradingView Widget -->
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-    new TradingView.widget({
-      "container_id": "tradingview_chart",
-      "autosize": true,
-      "symbol": "BINANCE:USDT", // Placeholder; replace with your CXP/USDT pair if TradingView supports it
-      "interval": "30",
-      "timezone": "Etc/UTC",
-      "theme": "dark",
-      "style": "1",
-      "locale": "en",
-      "hide_side_toolbar": false,
-      "allow_symbol_change": false
-    });
-  </script>
-
-  <!-- Wallet Connect Script -->
-  <script>
-    async function connectWallet() {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          alert('Connected: ' + accounts[0]);
-        } catch (error) {
-          alert('Connection error: ' + error.message);
-        }
-      } else {
-        alert('MetaMask not detected. Please install it.');
-      }
-    }
-  </script>
 </body>
 </html>
