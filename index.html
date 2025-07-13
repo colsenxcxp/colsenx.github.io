@@ -1,115 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX | CXP Token</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>ColsenX (CXP) Official</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #000;
-      color: #FFD700;
-      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
     }
     header {
-      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
     }
-    .logo {
-      width: 180px;
-      background-color: black;
-      padding: 10px;
-      border-radius: 16px;
+    header img {
+      height: 60px;
       transition: filter 0.3s ease;
     }
-    .logo:hover {
-      filter: brightness(1.5);
+    header img:hover {
+      filter: brightness(2);
+    }
+    nav a {
+      color: #f4a300;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      color: #f4a300;
+      font-size: 2.8rem;
     }
     .btn {
-      display: inline-block;
-      margin: 20px auto;
-      padding: 12px 28px;
-      font-size: 18px;
-      background: linear-gradient(90deg, #FFD700, #FF8C00);
-      color: black;
-      border: none;
-      border-radius: 32px;
-      cursor: pointer;
-      transition: transform 0.2s;
+      padding: 0.8rem 1.5rem;
+      margin: 1rem;
+      background: #f4a300;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
     .btn:hover {
-      transform: scale(1.05);
-    }
-    iframe {
-      border: none;
-      border-radius: 16px;
-      margin-top: 40px;
-    }
-    .social {
-      margin-top: 30px;
-    }
-    .social a {
-      color: #FFD700;
-      font-size: 24px;
-      margin: 0 15px;
-      transition: color 0.3s;
-    }
-    .social a:hover {
-      color: #FF8C00;
+      background: #ffcc33;
     }
     .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #111;
     }
-    .section h2 {
-      color: #FF8C00;
+    .chart-container {
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 900px;
     }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s ease forwards;
+    .newsletter input {
+      padding: 0.5rem;
+      border: none;
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 1rem;
     }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #000;
+      color: #aaa;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="logo.png" alt="ColsenX Logo" class="logo fade-in" />
-    <h1 class="fade-in">ColsenX (CXP)</h1>
-    <p class="fade-in">The lifestyle, trading & creator token</p>
+    <img src="logo.png" alt="ColsenX Logo" />
+    <nav>
+      <a href="whitepaper.pdf" target="_blank">Whitepaper</a>
+      <a href="https://t.me/ColsenXOfficial" target="_blank">Telegram</a>
+      <a href="https://twitter.com/ColsenX" target="_blank">Twitter</a>
+    </nav>
   </header>
 
-  <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" class="btn fade-in">Buy on PancakeSwap</a>
-
-  <iframe class="fade-in" src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1" width="100%" height="400"></iframe>
-
-  <div class="social fade-in">
-    <a href="https://twitter.com/ColsenX" target="_blank"><i class="fab fa-twitter"></i></a>
+  <div class="hero">
+    <h1>ColsenX (CXP)</h1>
+    <p>Trade. Earn. Experience the future of lifestyle crypto.</p>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">Buy on PancakeSwap</a>
+    <a class="btn" href="https://www.okx.com/web3/dex-swap?chainName=bsc&inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank">Swap on OKX DEX</a>
   </div>
 
-  <section class="section fade-in">
-    <h2>Why ColsenX?</h2>
-    <p>CXP is the next-generation token powering lifestyle, travel, trading, and creator freedom. With real-world use cases and an expanding Web3 ecosystem, ColsenX leads the way.</p>
-  </section>
+  <div class="section">
+    <h2>Live Chart</h2>
+    <div class="chart-container">
+      <iframe src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Current Price: <strong>$0.04277</strong> | <span style="color:#00ff00;">+60.65%</span></p>
+  </div>
 
-  <section class="section fade-in">
-    <h2>Token Details</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li><strong>Name:</strong> ColsenX</li>
-      <li><strong>Symbol:</strong> CXP</li>
-      <li><strong>Contract:</strong> 0x1B4454865143610Fbf51B1cf385Ab58047F25c23</li>
-      <li><strong>Network:</strong> BNB Smart Chain (BEP-20)</li>
-    </ul>
-  </section>
+  <div class="section newsletter">
+    <h2>Subscribe to Newsletter</h2>
+    <form action="https://formspree.io/f/your-code" method="POST">
+      <input type="email" name="email" placeholder="Enter your email..." required><br>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div>
 
-  <section class="section fade-in">
-    <h2>Join the Movement</h2>
-    <p>Be part of the ColsenX community. Whether you're a trader, creator, or crypto enthusiast — CXP is your key to unlocking opportunity.</p>
-  </section>
+  <div class="footer">
+    <p>© 2025 ColsenX | Built for the future. All rights reserved.</p>
+  </div>
 </body>
+
 </html>
