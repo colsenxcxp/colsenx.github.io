@@ -1,132 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX (CXP) Whitepaper</title>
+  <title>ColsenX (CXP) Official Site</title>
+  <link rel="icon" href="logo.png" type="image/png" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #ffffff;
-      color: #222;
-      line-height: 1.6;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
     }
-    h1, h2, h3 {
-      color: #111;
+
+    .logo {
+      width: 180px;
+      margin: 0 auto 1rem;
+      transition: 0.3s ease-in-out;
     }
+
+    .logo:hover {
+      filter: brightness(1.8);
+    }
+
+    .price {
+      font-size: 1rem;
+      color: #e6c674;
+      margin-bottom: 1.5rem;
+    }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #e6c674;
     }
-    h2 {
-      font-size: 1.5em;
-      margin-top: 1.5em;
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #ccc;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: left;
+
+    .btn {
+      background-color: #e6c674;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
     }
-    a {
-      color: #0066cc;
+
+    .btn:hover {
+      filter: brightness(1.2);
     }
+
     iframe {
-      background-color: #111;
+      border: none;
+      width: 100%;
+      max-width: 1000px;
+      height: 500px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 10px;
     }
+
     footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #777;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
-  <h1>ColsenX (CXP) Whitepaper</h1>
-  <p><strong>Version:</strong> 1.0<br>
-     <strong>Network:</strong> Binance Smart Chain (BEP-20)<br>
-     <strong>Token Symbol:</strong> CXP<br>
-     <strong>Contract Address:</strong> 0x1B4454865143610Fbf51B1cf385Ab58047F25c23<br>
-     <strong>Total Supply:</strong> 30,000,000 CXP<br>
-     <strong>Decimals:</strong> 10<br>
-     <strong>Date Published:</strong> July 2025
-  </p>
+  <img src="logo.png" alt="ColsenX Logo" class="logo" />
+  <div class="price">Current Price: $0.04277 | +60.65%</div>
 
-  <h2>1. Introduction</h2>
-  <p>ColsenX (CXP) is a multi-purpose Web3 utility token launched on Binance Smart Chain (BSC). Designed for use in lifestyle, finance, and creator-focused applications, CXP enables decentralized access to payments, trading, and community growth.</p>
+  <h1>ColsenX (CXP)</h1>
+  <p>The lifestyle and creator token that powers your freedom in crypto, trading, travel, and content creation.</p>
 
-  <h2>2. Vision and Mission</h2>
-  <p><strong>Vision:</strong> To create a trusted Web3 token that bridges lifestyle, finance, and creator tools for real-world daily use.</p>
-  <p><strong>Mission:</strong>
-    <ul>
-      <li>Launch a secure and accessible token on BSC</li>
-      <li>Enable CXP for swaps, payments, and tipping</li>
-      <li>Grow a self-sustaining ecosystem for traders and creators</li>
-    </ul>
-  </p>
+  <div class="buttons">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" class="btn" target="_blank">Buy on PancakeSwap</a>
+    <a href="https://www.okx.com/web3" class="btn" target="_blank">Trade on OKX</a>
+    <a href="whitepaper.pdf" class="btn" target="_blank">Read Whitepaper</a>
+    <a href="https://t.me/colsenx" class="btn" target="_blank">Join Telegram</a>
+  </div>
 
-  <h2>3. Key Utilities</h2>
-  <ul>
-    <li>💱 DEX Trading via PancakeSwap</li>
-    <li>💼 ColsenLite App Integration</li>
-    <li>💸 Rewards and Airdrops</li>
-    <li>🧾 Fast BSC-based Transactions</li>
-    <li>📲 Real-time Telegram Bot Alerts</li>
-  </ul>
-
-  <h2>4. Smart Contract</h2>
-  <p>Contract is verified on <a href="https://bscscan.com/address/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank">BscScan</a>. The source code is clean, with no minting, freezing, or honeypot risks.</p>
-
-  <h2>5. Tokenomics</h2>
-  <table>
-    <tr><th>Allocation</th><th>Percentage</th><th>Use</th></tr>
-    <tr><td>Liquidity & Circulation</td><td>45%</td><td>PancakeSwap & holders</td></tr>
-    <tr><td>Development Fund</td><td>20%</td><td>App, bots, platform updates</td></tr>
-    <tr><td>Ecosystem Rewards</td><td>15%</td><td>Airdrops, staking, LP support</td></tr>
-    <tr><td>Team (Locked)</td><td>10%</td><td>24-month vesting</td></tr>
-    <tr><td>Community Growth</td><td>10%</td><td>Marketing, contests, incentives</td></tr>
-  </table>
-
-  <h2>6. Ecosystem</h2>
-  <p><strong>ColsenLite Wallet:</strong> A lightweight mobile app that supports CXP/USDT trading, swaps, and secure storage with PIN/Biometric login.</p>
-  <p><strong>Telegram Bot:</strong> Sends buy/sell alerts for transparency and hype in the CXP community.</p>
-
-  <h2>7. Roadmap</h2>
-  <ul>
-    <li>✅ Q2 2025: Launch of contract, liquidity pool</li>
-    <li>✅ Q3 2025: Token verification, Telegram integration</li>
-    <li>🔜 Q4 2025: ColsenLite MVP, mobile testing</li>
-    <li>🔜 Q1 2026: Listings, cross-chain bridge</li>
-    <li>🔜 Q2 2026: Fiat gateway, creator utilities</li>
-  </ul>
-
-  <h2>8. Use Cases</h2>
-  <ul>
-    <li>Swap/trade CXP on PancakeSwap</li>
-    <li>Use CXP for creator tips or app fees</li>
-    <li>Earn through airdrops, staking (coming soon)</li>
-    <li>Governance voting in future DAO upgrade</li>
-  </ul>
-
-  <h2>9. Official Links</h2>
-  <ul>
-    <li>🌐 Website: <a href="https://colsenx.github.io">https://colsenx.github.io</a></li>
-    <li>🐦 Twitter: <a href="https://twitter.com/ColsenX">@ColsenX</a></li>
-    <li>💬 Telegram Bot: <a href="https://t.me/ColsenXbot">@ColsenXbot</a></li>
-    <li>🔗 PancakeSwap: <a href="https://pancakeswap.finance">Trade USDT–CXP</a></li>
-  </ul>
-
-  <h2>10. Live Chart</h2>
-  <iframe src="https://www.dexview.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" width="100%" height="600" style="border: none; background-color: #111;" loading="lazy"></iframe>
+  <iframe src="https://dexscreener.com/bsc/0x1b4454865143610fbf51b1cf385ab58047f25c23"></iframe>
 
   <footer>
-    <p><span style="color: blue; font-size: 0.85em;">© 2025 ColsenX. All rights reserved.</span><br>
-    <span style="color: green; font-size: 0.85em;">Binance Smart Chain Contract Verified</span></p>
+    © 2025 ColsenX (CXP) — Built for creators, travelers, and traders.
   </footer>
 </body>
+
 </html>
