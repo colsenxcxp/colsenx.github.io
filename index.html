@@ -4,196 +4,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX (CXP)</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ColsenX (USDT/CXP)</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <title>ColsenX (CXP) Official</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>ColsenX - CXP Token</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica', sans-serif;
       background-color: #000;
+      font-family: 'Orbitron', sans-serif;
       color: #fff;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #111;
+      font-family: 'Helvetica', sans-serif;
     }
-
     header {
-      background-color: #fff;
-      padding: 20px;
-      background-color: #111;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .logo {
-      width: 150px;
-      height: auto;
-      transition: filter 0.3s;
-      font-size: 32px;
-      font-weight: 700;
-      color: #111;
-    }
-
-    .logo:hover {
-      filter: brightness(1.8);
-    .btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px 16px;
-      margin: 5px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-
-    .price-stats {
-      font-size: 18px;
-      color: #fff;
-      margin-top: 10px;
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .buttons {
-      margin: 20px auto;
       display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    .connect-btn {
-      background-color: #007BFF;
-      color: white;
-      border: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
     }
-
-    .buttons a {
-      background-color: #d4af37;
-      color: black;
-      padding: 10px 16px;
-    .buy-btn {
-      background-color: #FF8C00;
-      color: white;
+    header img {
+      height: 60px;
+      transition: filter 0.3s ease;
+    }
+    header img:hover {
+      filter: brightness(2);
+    .logo {
+      max-width: 180px;
+      transition: filter 0.3s;
+    }
+    nav a {
+      color: #f4a300;
+      margin-left: 1.5rem;
       text-decoration: none;
+    .logo:hover {
+      filter: brightness(1.4);
+    }
+    .hero {
+    .top-banner {
+      background-color: #111;
+      padding: 0.5rem;
+      text-align: center;
+      padding: 3rem 1rem;
       font-weight: bold;
-      border-radius: 6px;
-      transition: background-color 0.3s;
+      color: #FFD700;
     }
-
-    .price {
-      font-size: 14px;
-      color: #CD7F32; /* Bronze gold */
-      margin: 10px 0 20px;
+    .hero h1 {
+      color: #f4a300;
+      font-size: 2.8rem;
+    .token-info {
+      font-size: 1.25rem;
+      margin: 1rem 0;
     }
-
-    .chart-container {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto 40px;
-    }
-
-    .chart-placeholder {
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 40px;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    .buttons a:hover {
-      background-color: #f5c542;
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .chart {
-      margin-top: 40px;
-    .social-links a {
-      color: #1DA1F2;
-      margin: 0 10px;
-      font-size: 14px;
+    .btn {
+      padding: 0.8rem 1.5rem;
+      margin: 1rem;
+      background: #f4a300;
+    .btn-custom {
+      background-color: #FFD700;
+      border: none;
+      color: #000;
+      font-weight: bold;
       text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
-
+    .btn:hover {
+      background: #ffcc33;
+    .btn-custom:hover {
+      background-color: #e0b200;
+    }
+    .section {
+      padding: 3rem 2rem;
     footer {
-      margin-top: 40px;
+      margin-top: 4rem;
+      font-size: 0.9rem;
       text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      color: #007BFF;
-      font-size: 14px;
-      color: #999;
+      background-color: #111;
+    }
+    .chart-container {
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 900px;
+    }
+    .newsletter input {
+      padding: 0.5rem;
+      border: none;
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #000;
+      color: #aaa;
     }
   </style>
 </head>
 
 <body>
-
   <header>
-    <img src="logo.png" alt="ColsenX Logo" class="logo" />
-    <div class="price-stats">
-      Current Price: $0.04277 | +60.65%
-    </div>
-    <div class="logo">ColsenX (USDT/CXP)</div>
-    <button class="btn connect-btn" onclick="connectWallet()">Connect Wallet</button>
+    <img src="logo.png" alt="ColsenX Logo" />
+    <nav>
+      <a href="whitepaper.pdf" target="_blank">Whitepaper</a>
+      <a href="https://t.me/ColsenXOfficial" target="_blank">Telegram</a>
+      <a href="https://twitter.com/ColsenX" target="_blank">Twitter</a>
+    </nav>
   </header>
-
-  <div class="buttons">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank">Buy on PancakeSwap</a>
-    <a href="https://www.okx.com/trade-spot/cxp-usdt" target="_blank">Trade on OKX</a>
-    <a href="whitepaper.pdf" target="_blank">Read Whitepaper</a>
-    <a href="https://t.me/colsenx" target="_blank">Join Telegram</a>
+  <div class="top-banner">
+    Current Price: $0.04277 | +60.65%
   </div>
-  <main style="text-align: center; padding: 30px 20px;">
-    <p class="price">Current Price: $0.04277 | +60.65%</p>
 
-  <div class="chart">
-    <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" width="100%" height="600" frameborder="0"></iframe>
+  <div class="hero">
+    <h1>ColsenX (CXP)</h1>
+    <p>Trade. Earn. Experience the future of lifestyle crypto.</p>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">Buy on PancakeSwap</a>
+    <a class="btn" href="https://www.okx.com/web3/dex-swap?chainName=bsc&inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank">Swap on OKX DEX</a>
+  <div class="text-center mt-4">
+    <img src="logo.png" alt="ColsenX Logo" class="logo" />
   </div>
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn buy-btn">
-      Buy USDT/CXP on PancakeSwap
-    </a>
 
+  <div class="section">
+    <h2>Live Chart</h2>
     <div class="chart-container">
-      <div class="chart-placeholder">
-        Live Chart: USDT/CXP (Dark Mode)<br/><br/>
-        TradingView or DEXTools embed not yet supported for this token directly.
-      </div>
+      <iframe src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+  <div class="container text-center mt-4">
+    <div class="token-info">
+      Contract: <code>0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code>
+    </div>
+    <p>Current Price: <strong>$0.04277</strong> | <span style="color:#00ff00;">+60.65%</span></p>
+  </div>
+
+  <div class="section newsletter">
+    <h2>Subscribe to Newsletter</h2>
+    <form action="https://formspree.io/f/your-code" method="POST">
+      <input type="email" name="email" placeholder="Enter your email..." required><br>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div>
+    <div class="mb-4">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn btn-custom me-2">Buy on PancakeSwap</a>
+      <a href="https://www.okx.com/web3/dex-swap?chainName=bsc&tokenIn=USDT&tokenOut=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank" class="btn btn-outline-light">Trade on OKX</a>
     </div>
 
-    <div class="social-links">
-      <a href="https://x.com/ColsenX" target="_blank">Twitter</a>
-      <a href="https://t.me/ColsenX" target="_blank">Telegram</a>
-      <a href="mailto:support@colsenx.com">Email Us</a>
+  <div class="footer">
+    <p>© 2025 ColsenX | Built for the future. All rights reserved.</p>
+    <iframe src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1&info=0&swaps=1" width="100%" height="400" style="border:0;"></iframe>
+
+    <div class="mt-5">
+      <h4>Join Our Newsletter</h4>
+      <form class="row g-3 justify-content-center">
+        <div class="col-auto">
+          <input type="email" class="form-control" placeholder="Enter your email" />
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-custom">Subscribe</button>
+        </div>
+      </form>
     </div>
-  </main>
 
-  <footer>
-    &copy; 2025 ColsenX. All rights reserved.
-    © 2025 ColsenX. All rights reserved.
-  </footer>
+    <div class="mt-4">
+      <a href="whitepaper.pdf" class="btn btn-outline-light me-2">Whitepaper</a>
+      <a href="https://t.me/ColsenX" target="_blank" class="btn btn-outline-light me-2">Telegram</a>
+      <a href="https://twitter.com/ColsenX" target="_blank" class="btn btn-outline-light">Twitter</a>
+    </div>
+
+    <footer class="text-muted mt-5">
+      &copy; 2025 ColsenX. All rights reserved.
+    </footer>
+  </div>
 </body>
 
-  <!-- Wallet Connect Script -->
-  <script>
-    async function connectWallet() {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          alert('Connected: ' + accounts[0]);
-        } catch (error) {
-          alert('Connection error: ' + error.message);
-        }
-      } else {
-        alert('MetaMask not detected. Please install it.');
-      }
-    }
-  </script>
-</body>
 </html>
