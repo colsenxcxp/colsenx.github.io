@@ -1,94 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX - CXP Token</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>ColsenX (CXP)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap">
   <style>
     body {
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Helvetica', sans-serif;
     }
-    .logo {
-      max-width: 180px;
-      transition: filter 0.3s;
-    }
-    .logo:hover {
-      filter: brightness(1.4);
-    }
-    .top-banner {
+
+    header {
       background-color: #111;
-      padding: 0.5rem;
+      padding: 1rem 0;
       text-align: center;
-      font-weight: bold;
-      color: #FFD700;
+      border-bottom: 2px solid #b08d57;
     }
-    .token-info {
-      font-size: 1.25rem;
-      margin: 1rem 0;
+
+    .logo {
+      width: 120px;
+      transition: filter 0.3s ease;
     }
-    .btn-custom {
-      background-color: #FFD700;
-      border: none;
+
+    .logo:hover {
+      filter: brightness(1.6);
+    }
+
+    .stats {
+      font-size: 1.1rem;
+      color: #b08d57;
+      margin-top: 0.5rem;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .buttons a {
+      background-color: #b08d57;
       color: #000;
+      padding: 1rem 2rem;
       font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
     }
-    .btn-custom:hover {
-      background-color: #e0b200;
+
+    .buttons a:hover {
+      background-color: #d2a95d;
     }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
+
+    .section {
+      padding: 2rem;
       text-align: center;
+    }
+
+    iframe {
+      margin-top: 1rem;
+      border: none;
+      width: 100%;
+      height: 600px;
+    }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+      margin: 2rem 0;
+    }
+
+    .social {
+      margin-top: 1rem;
+    }
+
+    .social a {
+      color: #b08d57;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .newsletter input {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .newsletter button {
+      padding: 0.5rem 1rem;
+      background-color: #b08d57;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
   </style>
 </head>
+
 <body>
-  <div class="top-banner">
-    Current Price: $0.04277 | +60.65%
-  </div>
-
-  <div class="text-center mt-4">
+  <header>
     <img src="logo.png" alt="ColsenX Logo" class="logo" />
+    <div class="stats">Current Price: $0.04277 | +60.65%</div>
+  </header>
+
+  <div class="buttons">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=USDT" target="_blank">Buy on PancakeSwap</a>
+    <a href="https://www.okx.com/" target="_blank">Trade on OKX</a>
   </div>
 
-  <div class="container text-center mt-4">
-    <div class="token-info">
-      Contract: <code>0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code>
-    </div>
-
-    <div class="mb-4">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn btn-custom me-2">Buy on PancakeSwap</a>
-      <a href="https://www.okx.com/web3/dex-swap?chainName=bsc&tokenIn=USDT&tokenOut=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank" class="btn btn-outline-light">Trade on OKX</a>
-    </div>
-
-    <iframe src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1&info=0&swaps=1" width="100%" height="400" style="border:0;"></iframe>
-
-    <div class="mt-5">
-      <h4>Join Our Newsletter</h4>
-      <form class="row g-3 justify-content-center">
-        <div class="col-auto">
-          <input type="email" class="form-control" placeholder="Enter your email" />
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-custom">Subscribe</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="mt-4">
-      <a href="whitepaper.pdf" class="btn btn-outline-light me-2">Whitepaper</a>
-      <a href="https://t.me/ColsenX" target="_blank" class="btn btn-outline-light me-2">Telegram</a>
-      <a href="https://twitter.com/ColsenX" target="_blank" class="btn btn-outline-light">Twitter</a>
-    </div>
-
-    <footer class="text-muted mt-5">
-      &copy; 2025 ColsenX. All rights reserved.
-    </footer>
+  <div class="section">
+    <h2>Live Chart</h2>
+    <iframe src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1"></iframe>
   </div>
+
+  <div class="section newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <input type="email" placeholder="Your email" />
+    <button>Subscribe</button>
+  </div>
+
+  <div class="section">
+    <h3>Resources</h3>
+    <div class="social">
+      <a href="https://t.me/colsenx">Telegram</a>
+      <a href="https://twitter.com/ColsenX">Twitter</a>
+      <a href="/whitepaper.pdf">Whitepaper</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 ColsenX. All rights reserved.
+  </footer>
 </body>
+
 </html>
