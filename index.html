@@ -4,69 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ColsenX (CXP)</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #d4af37;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #d4af37;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     header {
-      padding: 2rem 1rem;
+      padding: 2rem;
+      text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    header img {
+      width: 150px;
+      height: auto;
     }
-    .contract-address {
+    h1 {
       margin-top: 1rem;
-      font-size: 1rem;
-      word-break: break-word;
-      color: #aaa;
+      font-size: 2.5rem;
+      color: #d4af37;
     }
-    .btn-swap {
-      display: inline-block;
-      margin-top: 2rem;
+    .contract {
+      background: #111;
       padding: 1rem 2rem;
-      background-color: #d4af37;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
+      margin: 1rem 0;
+      border: 1px solid #444;
       border-radius: 8px;
     }
-    .btn-swap:hover {
-      background-color: #b99630;
+    .btn {
+      background-color: #d4af37;
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 1rem;
+      transition: background-color 0.3s;
     }
-    .logo {
-      width: 120px;
-      margin: 1rem auto;
+    .btn:hover {
+      background-color: #eac555;
     }
-    footer {
-      margin-top: 3rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #555;
+    iframe {
+      margin: 2rem 0;
+      border: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="ColsenX Logo" class="logo" />
+    <img src="logo.png" alt="ColsenX Logo" />
     <h1>ColsenX (CXP)</h1>
-    <p class="contract-address">
-      Contract: <br />
-      <code>0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code>
-    </p>
-    <a class="btn-swap" href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">
+    <div class="contract">
+      <strong>Contract:</strong><br />
+      0x1B4454865143610Fbf51B1cf385Ab58047F25c23
+    </div>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank">
       Buy on PancakeSwap
     </a>
   </header>
 
-  <footer>
-    &copy; 2025 ColsenX. All rights reserved.
-  </footer>
+  <iframe
+    src="https://www.geckoterminal.com/bsc/pools/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?embed=1"
+    width="90%"
+    height="500"
+    allowfullscreen>
+  </iframe>
+
 </body>
 </html>
