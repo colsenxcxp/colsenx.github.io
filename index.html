@@ -2,124 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX | $CXP Token</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <!-- Basic styling (no external CSS needed) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ColsenX ($CXP)</title>
+  <link rel="icon" href="logo.png" />
   <style>
-    :root {
-      --bg: #0f172a;
-      --primary: #38bdf8;
-      --text: #f1f5f9;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Minimal clean look matching the old theme */
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header,
-    footer {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-    p.lead {
-      max-width: 50ch;
-      margin: 0 auto 2rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      border-radius: 0.5rem;
-      background: var(--primary);
       color: #000;
-      font-weight: 600;
+      background: #fff;
+    }
+    h1, h2 {
+      margin-top: 1.5rem;
+    }
+    .buy-btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #000;
+      border-radius: 6px;
       text-decoration: none;
-      transition: background 0.2s ease;
+      font-weight: 600;
+      margin: 1rem 0;
+      color: #000;
     }
-    .btn:hover {
-      background: #0ea5e9;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem 1rem;
+    .buy-btn:hover {
+      background: #f0f0f0;
     }
     code {
-      background: #1e293b;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      font-size: 0.9rem;
-      cursor: pointer;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
     }
     ul {
-      list-style: none;
-      margin-top: 1rem;
-      text-align: left;
-      max-width: 30rem;
-      margin-inline: auto;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
+      margin-left: 1.25rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ColsenX ($CXP)</h1>
-    <p class="lead">Utility token powering the ColsenX ecosystem.</p>
-    <!-- Buy button: PancakeSwap, USDT → CXP on BNB Smart Chain -->
-    <a
-      class="btn"
-      href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Buy on PancakeSwap (USDT ⇄ CXP)</a
-    >
-  </header>
+  <img src="logo.png" alt="ColsenX logo" style="max-width:120px;" />
+  <h1>ColsenX ($CXP)</h1>
+  <p>Web3 for lifestyle, trading, travel, and creators.</p>
 
-  <main>
-    <div>
-      <h2>Smart‑Contract</h2>
-      <p><code title="Click to copy">0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code></p>
+  <a class="buy-btn" href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank" rel="noopener">Buy on PancakeSwap (USDT ⇄ CXP)</a>
 
-      <h2>Tokenomics</h2>
-      <ul>
-        <li>➡️ Total Supply: 100,000,000 CXP</li>
-        <li>🔒 Liquidity Locked: 60%</li>
-        <li>💼 Treasury & Operations: 20%</li>
-        <li>🎁 Community Rewards: 15%</li>
-        <li>👩‍💻 Dev Fund: 5%</li>
-      </ul>
-    </div>
-  </main>
+  <h2>Smart‑Contract</h2>
+  <p><code id="contract">0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code> <button id="copy">Copy</button></p>
 
-  <footer>
-    <small>© 2025 ColsenX. All rights reserved.</small>
-  </footer>
+  <h2>Tokenomics</h2>
+  <ul>
+    <li>Total Supply: 100,000,000 CXP</li>
+    <li>Liquidity Locked: 60%</li>
+    <li>Treasury & Operations: 20%</li>
+    <li>Community Rewards: 15%</li>
+    <li>Dev Fund: 5%</li>
+  </ul>
 
-  <!-- Optional: auto‑copy contract address to clipboard -->
+  <h2>Roadmap</h2>
+  <ul>
+    <li>✅ Launch CXP on BSC + Polygon</li>
+    <li>✅ PancakeSwap Pool & Verified Contract</li>
+    <li>Telegram Bot Alerts + Price Tracking</li>
+    <li>CEX Listings (Bitget/Bybit target)</li>
+    <li>Partnerships & Utility Expansion</li>
+  </ul>
+
+  <p>© 2025 ColsenX. All rights reserved.</p>
+
   <script>
-    const codeEl = document.querySelector('code');
-    codeEl.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(codeEl.textContent.trim
+    document.getElementById('copy').addEventListener('click', () => {
+      navigator.clipboard.writeText(document.getElementById('contract').textContent.trim());
+      alert('Contract copied to clipboard!');
+    });
+  </script>
+</body>
+</html>
