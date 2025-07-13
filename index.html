@@ -1,82 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ColsenX ($CXP)</title>
-  <link rel="icon" href="logo.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColsenX (CXP)</title>
+  <link rel="icon" href="logo.png">
   <style>
-    /* Minimal clean look matching the old theme */
     body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      line-height: 1.6;
-      color: #000;
-      background: #fff;
+      background-color: #000;
+      color: #d4af37; /* Bronze gold */
+      text-align: center;
+      padding: 2rem;
     }
-    h1, h2 {
-      margin-top: 1.5rem;
+    img.logo {
+      width: 120px;
+      margin-bottom: 1rem;
     }
-    .buy-btn {
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
       display: inline-block;
-      padding: 0.6rem 1.2rem;
-      border: 1px solid #000;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 1rem 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #d4af37;
       color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 1rem 0;
     }
-    .buy-btn:hover {
-      background: #f0f0f0;
+    .btn:hover {
+      background-color: #b8860b;
     }
-    code {
-      background: #f5f5f5;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
+    .contract {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+    button.copy {
+      margin-left: 0.5rem;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.8rem;
+      background: #d4af37;
+      color: #000;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .socials {
+      margin: 1rem 0;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .qr-code {
+      margin: 2rem 0;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #fff;
     }
     ul {
-      margin-left: 1.25rem;
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="ColsenX logo" style="max-width:120px;" />
-  <h1>ColsenX ($CXP)</h1>
-  <p>Web3 for lifestyle, trading, travel, and creators.</p>
+  <img src="logo.png" alt="ColsenX Logo" class="logo">
+  <h1>ColsenX (CXP)</h1>
+  <div class="subtitle">Web3 for lifestyle, trading, travel, and creators.</div>
 
-  <a class="buy-btn" href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank" rel="noopener">Buy on PancakeSwap (USDT ⇄ CXP)</a>
+  <a class="btn" href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059ff775485246999027b3197955&outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" target="_blank" rel="noopener">Buy on PancakeSwap</a>
 
-  <h2>Smart‑Contract</h2>
-  <p><code id="contract">0x1B4454865143610Fbf51B1cf385Ab58047F25c23</code> <button id="copy">Copy</button></p>
+  <div class="contract">
+    BSC Contract: <span id="contract">0x1B4454865143610Fbf51B1cf385Ab58047F25c23</span>
+    <button class="copy" onclick="copyContract()">Copy</button>
+  </div>
+
+  <div class="socials">
+    <a href="https://t.me/colsenx" target="_blank">Telegram</a>
+    <a href="https://twitter.com/colsenx" target="_blank">Twitter</a>
+  </div>
+
+  <div>Scan to view in Trust Wallet</div>
+  <div class="qr-code">
+    <img src="qr.png" alt="QR Code" width="160">
+  </div>
 
   <h2>Tokenomics</h2>
   <ul>
-    <li>Total Supply: 100,000,000 CXP</li>
-    <li>Liquidity Locked: 60%</li>
-    <li>Treasury & Operations: 20%</li>
-    <li>Community Rewards: 15%</li>
-    <li>Dev Fund: 5%</li>
+    <li>Total Supply: 30,000,000 CXP</li>
+    <li>10% Team</li>
+    <li>40% Liquidity</li>
+    <li>30% Community</li>
+    <li>20% Marketing</li>
   </ul>
 
   <h2>Roadmap</h2>
   <ul>
     <li>✅ Launch CXP on BSC + Polygon</li>
-    <li>✅ PancakeSwap Pool & Verified Contract</li>
-    <li>Telegram Bot Alerts + Price Tracking</li>
-    <li>CEX Listings (Bitget/Bybit target)</li>
-    <li>Partnerships & Utility Expansion</li>
+    <li>✅ PancakeSwap Pool & Verified Contract</li>
+    <li>🚀 Telegram Bot Alerts + Price Tracking</li>
+    <li>📈 CEX Listings (Bitget/Bybit target)</li>
+    <li>🌍 Partnerships & Utility Expansion</li>
   </ul>
 
-  <p>© 2025 ColsenX. All rights reserved.</p>
-
   <script>
-    document.getElementById('copy').addEventListener('click', () => {
-      navigator.clipboard.writeText(document.getElementById('contract').textContent.trim());
+    function copyContract() {
+      const text = document.getElementById('contract').textContent.trim();
+      navigator.clipboard.writeText(text);
       alert('Contract copied to clipboard!');
-    });
+    }
   </script>
 </body>
 </html>
