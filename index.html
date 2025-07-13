@@ -1,117 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX (CXP) Official Site</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ColsenX (USDT/CXP)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Helvetica, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
     }
 
-    body {
-      background-color: #000;
-      color: #fff;
+    header {
+      background-color: #fff;
+      padding: 20px;
       text-align: center;
-      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
 
     .logo {
-      width: 180px;
-      margin: 0 auto 1rem;
-      transition: 0.3s ease-in-out;
-    }
-
-    .logo:hover {
-      filter: brightness(1.8);
-    }
-
-    .price {
-      font-size: 1rem;
-      color: #e6c674;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #e6c674;
-    }
-
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      font-size: 32px;
+      font-weight: 700;
+      color: #111;
     }
 
     .btn {
-      background-color: #e6c674;
-      color: #000;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-weight: bold;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s;
+      font-size: 14px;
+      transition: all 0.2s ease;
     }
 
     .btn:hover {
-      filter: brightness(1.2);
+      background-color: #ddd;
     }
 
-    iframe {
+    .connect-btn {
+      background-color: #007BFF;
+      color: white;
       border: none;
+    }
+
+    .buy-btn {
+      background-color: #FF8C00;
+      color: white;
+      text-decoration: none;
+    }
+
+    .price {
+      font-size: 14px;
+      color: #CD7F32; /* Bronze gold */
+      margin: 10px 0 20px;
+    }
+
+    .chart-container {
       width: 100%;
-      max-width: 1000px;
-      height: 500px;
-      margin: 2rem auto;
-      display: block;
-      border-radius: 10px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .chart-placeholder {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: #1DA1F2;
+      margin: 0 10px;
+      font-size: 14px;
+      text-decoration: none;
     }
 
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      color: #007BFF;
+      font-size: 14px;
     }
   </style>
 </head>
-
 <body>
-  <img src="logo.png" alt="ColsenX Logo" class="logo" />
-  <div class="price">Current Price: $0.04277 | +60.65%</div>
 
-  <h1>ColsenX (CXP)</h1>
-  <p>The lifestyle and creator token that powers your freedom in crypto, trading, travel, and content creation.</p>
+  <header>
+    <div class="logo">ColsenX (USDT/CXP)</div>
+    <button class="btn connect-btn" onclick="connectWallet()">Connect Wallet</button>
+  </header>
 
-  <div class="buttons">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23" class="btn" target="_blank">Buy on PancakeSwap</a>
-    <a href="https://www.okx.com/web3" class="btn" target="_blank">Trade on OKX</a>
-    <a href="whitepaper.pdf" class="btn" target="_blank">Read Whitepaper</a>
-    <a href="https://t.me/colsenx" class="btn" target="_blank">Join Telegram</a>
-  </div>
+  <main style="text-align: center; padding: 30px 20px;">
+    <p class="price">Current Price: $0.04277 | +60.65%</p>
 
-  <iframe src="https://dexscreener.com/bsc/0x1b4454865143610fbf51b1cf385ab58047f25c23"></iframe>
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="btn buy-btn">
+      Buy USDT/CXP on PancakeSwap
+    </a>
+
+    <div class="chart-container">
+      <div class="chart-placeholder">
+        Live Chart: USDT/CXP (Dark Mode)<br/><br/>
+        TradingView or DEXTools embed not yet supported for this token directly.
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://x.com/ColsenX" target="_blank">Twitter</a>
+      <a href="https://t.me/ColsenX" target="_blank">Telegram</a>
+      <a href="mailto:support@colsenx.com">Email Us</a>
+    </div>
+  </main>
 
   <footer>
-    © 2025 ColsenX (CXP) — Built for creators, travelers, and traders.
+    © 2025 ColsenX. All rights reserved.
   </footer>
-</body>
 
+  <!-- Wallet Connect Script -->
+  <script>
+    async function connectWallet() {
+      if (window.ethereum) {
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          alert('Connected: ' + accounts[0]);
+        } catch (error) {
+          alert('Connection error: ' + error.message);
+        }
+      } else {
+        alert('MetaMask not detected. Please install it.');
+      }
+    }
+  </script>
+</body>
 </html>
