@@ -32,7 +32,7 @@
     <h2 class="text-2xl font-bold mb-4">Tokenomics</h2>
     <p>Total Supply: <strong>30,000,000 CXP</strong></p>
     <div class="mt-6">
-      <img src="images/tokenomics-piechart.png" alt="Tokenomics Chart" class="mx-auto h-64">
+      <canvas id="tokenChart" width="300" height="300" class="mx-auto"></canvas>
       <ul class="mt-4 space-y-1 text-gray-700">
         <li>🧑‍💻 10% Team</li>
         <li>💧 40% Liquidity</li>
@@ -94,5 +94,39 @@
   <footer class="bg-gray-900 text-white py-4 text-center text-sm">
     © 2025 ColsenX. All rights reserved.
   </footer>
+
+  <!-- Chart.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('tokenChart').getContext('2d');
+    const tokenChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Team (10%)', 'Liquidity (40%)', 'Community (30%)', 'Marketing (20%)'],
+        datasets: [{
+          data: [10, 40, 30, 20],
+          backgroundColor: ['#6366f1', '#10b981', '#f59e0b', '#ef4444'],
+          borderColor: '#ffffff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#111' }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.label}: ${context.raw}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
