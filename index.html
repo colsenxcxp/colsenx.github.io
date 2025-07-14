@@ -54,7 +54,8 @@
   </style>
 </head>
 <body class="bg-white text-gray-800 dark:bg-black dark:text-white">
-  <!-- Toggle -->
+
+  <!-- Theme Toggle -->
   <div class="flex justify-end p-4">
     <button onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded shadow">🌓 Toggle Theme</button>
   </div>
@@ -82,15 +83,27 @@
       <a href="https://web3.okx.com/token/bsc/0x1b4454865143610fbf51b1cf385ab58047f25c23" target="_blank" class="px-4 py-2 bg-blue-500 text-white text-sm rounded shadow hover:scale-105 transform transition">View on OKX</a>
     </div>
   </section>
-  <!-- Live Price Ticker -->
-  <section class="bg-gray-900 py-4 text-center fade-in delay-2">
-    <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" height="100" width="100%" class="rounded-lg border-0"></iframe>
-  </section>
 
-  <!-- Live Chart -->
+  <!-- Live Ticker (Dark) -->
+  <section class="bg-gray-900 py-4 text-center fade-in delay-2">
+    <iframe
+      src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark"
+      height="100"
+      width="100%"
+      style="border:0; border-radius: 12px; overflow:hidden;"
+      allowfullscreen
+    ></iframe>
+  </section>
+  <!-- Live Chart (Dark) -->
   <section class="bg-gray-900 py-6 fade-in delay-2">
     <div class="max-w-5xl mx-auto">
-      <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" height="500" class="w-full rounded-lg"></iframe>
+      <iframe
+        src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark"
+        height="500"
+        width="100%"
+        style="border:0; border-radius: 12px; overflow:hidden;"
+        allowfullscreen
+      ></iframe>
     </div>
   </section>
 
@@ -185,7 +198,7 @@
 
     function switchLang(lang) {
       alert(lang === 'en' ? 'Language set to English 🇺🇸' : 'Wika itinakda sa Filipino 🇵🇭');
-      // Future: swap text dynamically using i18n or JSON
+      // Future: Dynamic text swap
     }
   </script>
 </body>
