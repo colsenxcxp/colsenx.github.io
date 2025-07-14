@@ -10,8 +10,7 @@
       background-color: #000;
       color: white;
     }
-    header {
-      position: relative;
+    header, footer {
       background-color: #000;
     }
     .logo-wrapper {
@@ -22,22 +21,19 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, gold 0%, transparent 60%);
       border-radius: 50%;
-      background: radial-gradient(circle, gold, rgba(255,255,255,0));
       opacity: 0;
-      transition: all 0.3s ease;
+      transform: translate(-50%, -50%) scale(0.5);
       pointer-events: none;
+      transition: all 0.3s ease-in-out;
       z-index: 10;
     }
     .logo-wrapper:hover .spark {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(2);
-    }
-    footer {
-      background-color: #000;
+      transform: translate(-50%, -50%) scale(1.8);
     }
   </style>
 </head>
