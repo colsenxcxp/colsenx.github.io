@@ -96,20 +96,34 @@
   <header class="bg-black text-white p-8 text-center fade-in">
   <div class="relative inline-block group">
     <img src="images/logo.png" alt="ColsenX Logo"
-         class="mx-auto h-24 mb-4 transition-transform duration-300 group-hover:scale-110 z-10 relative">
+         class="mx-auto h-24 mb-4 transition-transform duration-300 group-hover:scale-110 relative z-10">
 
-    <!-- SPARK EFFECT (in front) -->
-    <svg class="absolute top-0 left-0 w-full h-full pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 100">
+    <!-- STRONG SPARK BURST -->
+    <svg class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150" viewBox="0 0 100 100">
+      <g fill="gold">
+        <circle r="2">
+          <animateMotion dur="0.3s" begin="mouseover" fill="freeze">
+            <mpath xlink:href="#sparkPath1" />
+          </animateMotion>
+        </circle>
+        <circle r="2">
+          <animateMotion dur="0.3s" begin="mouseover" fill="freeze">
+            <mpath xlink:href="#sparkPath2" />
+          </animateMotion>
+        </circle>
+        <circle r="2">
+          <animateMotion dur="0.3s" begin="mouseover" fill="freeze">
+            <mpath xlink:href="#sparkPath3" />
+          </animateMotion>
+        </circle>
+      </g>
+
+      <!-- Spark paths -->
       <defs>
-        <radialGradient id="spark" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="gold" stop-opacity="1" />
-          <stop offset="100%" stop-color="transparent" stop-opacity="0" />
-        </radialGradient>
+        <path id="sparkPath1" d="M50,50 l15,-25" />
+        <path id="sparkPath2" d="M50,50 l-20,10" />
+        <path id="sparkPath3" d="M50,50 l10,20" />
       </defs>
-      <circle cx="50" cy="50" r="10" fill="url(#spark)">
-        <animate attributeName="r" values="10;40" dur="0.4s" begin="mouseover" fill="freeze" />
-        <animate attributeName="opacity" values="1;0" dur="0.4s" begin="mouseover" fill="freeze" />
-      </circle>
     </svg>
   </div>
   <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
