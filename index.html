@@ -93,11 +93,20 @@
   </div>
 
   <!-- Hero Section -->
-  <header class="bg-black text-white p-8 text-center fade-in">
-    <img src="images/logo.png" alt="ColsenX Logo" class="mx-auto h-24 mb-4 sparkle-on-hover">
-    <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
-    <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
-  </header>
+<header class="bg-black text-white p-8 text-center fade-in">
+  <div class="relative inline-block">
+    <img src="images/logo.png" alt="ColsenX Logo" class="mx-auto h-24 mb-4 transition-transform duration-300 hover:scale-105">
+    <svg class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-0 hover:opacity-100 transition-opacity duration-500" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="gold" stroke-width="2">
+        <animate attributeName="r" values="40;50;40" dur="1s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
+  <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
+  <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
+</header>
+
 
   <!-- Popup Alert -->
   <div class="popup">🔥 New Listing Coming Soon!</div>
@@ -122,22 +131,32 @@
   </section>
 
   <!-- Live Chart -->
-  <section class="bg-gray-900 py-6 fade-in delay-2">
-    <div class="max-w-5xl mx-auto">
-      <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark" height="500" width="100%" style="border:0; border-radius: 12px; overflow:hidden;" allowfullscreen></iframe>
+ <section class="py-12 px-6 bg-white dark:bg-gray-900 fade-in">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl font-bold mb-4">📊 Tokenomics</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left text-sm">
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>🔁 Liquidity:</strong> 30%</p>
+      </div>
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>👨‍💻 Team & Dev:</strong> 20%</p>
+      </div>
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>🎁 Airdrop & Community:</strong> 15%</p>
+      </div>
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>📣 Marketing:</strong> 15%</p>
+      </div>
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>📈 Staking Rewards:</strong> 10%</p>
+      </div>
+      <div class="bg-black text-white p-4 rounded-lg shadow">
+        <p><strong>🚀 Ecosystem Growth:</strong> 10%</p>
+      </div>
     </div>
-  </section>
-  <!-- Tokenomics -->
-  <section class="py-12 bg-white dark:bg-gray-800 text-center fade-in delay-3">
-    <h2 class="text-2xl font-bold mb-4">Tokenomics</h2>
-    <p>Total Supply: <strong>30,000,000 CXP</strong></p>
-    <ul class="mt-6 space-y-1 text-gray-700 dark:text-gray-300">
-      <li>🧑‍💻 10% Team</li>
-      <li>💧 40% Liquidity</li>
-      <li>🌐 30% Community</li>
-      <li>📢 20% Marketing</li>
-    </ul>
-  </section>
+  </div>
+</section>
+
 
   <!-- CXP Utility -->
   <section class="py-12 px-4 bg-white dark:bg-black fade-in delay-2">
