@@ -93,21 +93,28 @@
   </div>
 
   <!-- Hero Section -->
-  <header class="bg-black text-white p-8 text-center fade-in">
+ <header class="bg-black text-white p-8 text-center fade-in">
   <div class="relative inline-block group">
     <img src="images/logo.png" alt="ColsenX Logo"
          class="mx-auto h-24 mb-4 transition-transform duration-300 group-hover:scale-110 relative z-10">
 
-    <!-- REAL BLACKSMITH-STYLE SPARK BURST -->
-    <svg class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150" viewBox="0 0 100 100">
+    <!-- STRONG FORGE-LIKE SPARK -->
+    <svg class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 opacity-0" viewBox="0 0 100 100">
+      <!-- Big flash -->
+      <circle cx="50" cy="50" r="5" fill="gold">
+        <animate attributeName="r" values="5;60" dur="0.4s" begin="mouseover" fill="freeze" />
+        <animate attributeName="opacity" values="1;0" dur="0.4s" begin="mouseover" fill="freeze" />
+      </circle>
+
+      <!-- Sparks -->
       <circle cx="50" cy="50" r="2" fill="gold">
-        <animate attributeName="cx" values="50;70" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;30" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cx" values="50;80" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;20" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
       </circle>
       <circle cx="50" cy="50" r="2" fill="gold">
-        <animate attributeName="cx" values="50;30" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;70" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cx" values="50;25" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;75" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
       </circle>
       <circle cx="50" cy="50" r="2" fill="gold">
@@ -117,9 +124,11 @@
       </circle>
     </svg>
   </div>
+
   <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
   <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
 </header>
+
 
   <!-- Popup Alert -->
   <div class="popup">🔥 New Listing Coming Soon!</div>
