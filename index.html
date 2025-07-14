@@ -62,7 +62,7 @@
       left: -10%;
       width: 120%;
       height: 120%;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent 70%);
+      background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 70%);
       opacity: 0;
       transform: scale(0);
       pointer-events: none;
@@ -74,41 +74,30 @@
       animation: sparkle 0.6s ease forwards;
     }
     @keyframes sparkle {
-      0% {
-        transform: scale(1.5) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(2) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: scale(1.5) rotate(0deg); opacity: 1; }
+      100% { transform: scale(2) rotate(360deg); opacity: 0; }
     }
   </style>
 </head>
 <body class="bg-white text-gray-800 dark:bg-black dark:text-white">
 
-  <!-- Theme Toggle -->
   <div class="flex justify-end p-4">
     <button onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded shadow">🌓 Toggle Theme</button>
   </div>
 
-  <!-- Hero Section -->
   <header class="bg-black text-white p-8 text-center fade-in">
     <img src="images/logo.png" alt="ColsenX Logo" class="mx-auto h-24 mb-4 sparkle-on-hover">
     <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
     <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
   </header>
 
-  <!-- Popup Alert -->
   <div class="popup">🔥 New Listing Coming Soon!</div>
 
-  <!-- Language Switch -->
   <div class="flex justify-end px-4 mt-2 text-sm space-x-2">
     <button onclick="switchLang('en')" class="underline">🇺🇸 English</button>
     <button onclick="switchLang('ph')" class="underline">🇵🇭 Filipino</button>
   </div>
 
-  <!-- Buy Buttons -->
   <section class="bg-black py-6 fade-in delay-1">
     <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-4">
       <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="px-4 py-2 bg-yellow-400 text-white text-sm rounded shadow hover:scale-105 transform transition">Buy on PancakeSwap</a>
@@ -116,69 +105,16 @@
     </div>
   </section>
 
-  <!-- Live Ticker -->
   <section class="bg-gray-900 py-4 text-center fade-in delay-2">
     <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark" height="100" width="100%" style="border:0; border-radius: 12px; overflow:hidden;" allowfullscreen></iframe>
   </section>
 
-  <!-- Live Chart -->
   <section class="bg-gray-900 py-6 fade-in delay-2">
     <div class="max-w-5xl mx-auto">
       <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark" height="500" width="100%" style="border:0; border-radius: 12px; overflow:hidden;" allowfullscreen></iframe>
     </div>
   </section>
-  <!-- Tokenomics -->
-  <section class="py-12 bg-white dark:bg-gray-800 text-center fade-in delay-3">
-    <h2 class="text-2xl font-bold mb-4">Tokenomics</h2>
-    <p>Total Supply: <strong>30,000,000 CXP</strong></p>
-    <ul class="mt-6 space-y-1 text-gray-700 dark:text-gray-300">
-      <li>🧑‍💻 10% Team</li>
-      <li>💧 40% Liquidity</li>
-      <li>🌐 30% Community</li>
-      <li>📢 20% Marketing</li>
-    </ul>
-  </section>
 
-  <!-- CXP Utility -->
-  <section class="py-12 px-4 bg-white dark:bg-black fade-in delay-2">
-    <h2 class="text-2xl font-bold text-center mb-6">CXP Utility</h2>
-    <ul class="max-w-3xl mx-auto space-y-2 text-gray-700 dark:text-gray-300">
-      <li>✅ Pay for travel, hotels, and transport in partner networks</li>
-      <li>✅ Tip and support creators directly with CXP</li>
-      <li>✅ Trade and swap across Web3 wallets and DEXs</li>
-      <li>✅ Use CXP in lifestyle-focused mobile apps like ColsenLite</li>
-    </ul>
-  </section>
-
-  <!-- Roadmap -->
-  <section class="py-12 px-6 bg-gray-100 dark:bg-gray-800 fade-in delay-3">
-    <h2 class="text-2xl font-bold text-center mb-6">Roadmap</h2>
-    <div class="max-w-4xl mx-auto space-y-4">
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q2 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>✅ Launch on BSC & Polygon</li>
-          <li>✅ Token verified and added on PancakeSwap</li>
-        </ul>
-      </div>
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q3 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>Telegram bot alerts with price tracking</li>
-          <li>Integrate with payment gateways</li>
-        </ul>
-      </div>
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q4 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>CEX Listings (targeting Bybit, Bitget)</li>
-          <li>Launch partnerships with travel & lifestyle brands</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust & Community -->
   <section class="py-12 px-6 bg-white dark:bg-black fade-in delay-2">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-2xl font-bold mb-4">Trust & Community</h2>
@@ -189,30 +125,18 @@
       </div>
       <p class="mb-2">
         ✅ <strong>Ownership Renounced:</strong> Contract ownership fully renounced on BSC.
-        <a href="https://bscscan.com/token/0x1B4454865143610Fbf51B1cf385Ab58047F25c23#readContract" target="_blank" class="text-blue-600 underline">View on BscScan</a>
+        <a href="https://bscscan.com/address/0x1B4454865143610Fbf51B1cf385Ab58047F25c23#writeContract" target="_blank" class="text-blue-600 underline">View on BscScan</a>
       </p>
       <p class="mb-4">📈 Community: 1,200+ Telegram users, 3,500+ followers on X</p>
     </div>
   </section>
-  <!-- Newsletter Opt-in -->
-  <section class="bg-gray-100 dark:bg-gray-900 py-10 px-4 text-center">
-    <h2 class="text-xl font-bold mb-4">📧 Stay Updated</h2>
-    <p class="mb-4 text-gray-700 dark:text-gray-300">Subscribe to receive news, listings, and updates about CXP.</p>
-    <form class="max-w-md mx-auto">
-      <input type="email" placeholder="Your email" class="w-full p-3 rounded mb-2 border border-gray-300 dark:border-gray-700">
-      <button type="submit" class="w-full bg-yellow-400 text-black font-semibold py-2 rounded hover:bg-yellow-300 transition">Subscribe</button>
-    </form>
-  </section>
 
-  <!-- Footer -->
   <footer class="bg-black text-white py-4 text-center text-sm">
     © 2025 ColsenX. All rights reserved.
   </footer>
 
-  <!-- Telegram Floating Button -->
   <a href="https://t.me/ColsenX" target="_blank" class="telegram-button">Join Telegram</a>
 
-  <!-- Scripts -->
   <script>
     setTimeout(() => {
       const popup = document.querySelector('.popup');
