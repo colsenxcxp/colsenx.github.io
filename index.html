@@ -2,281 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ColsenX (CXP) Official</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ColsenX | CXP Token</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html.dark {
-      background-color: #111827;
-      color: #f3f4f6;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .popup {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: #facc15;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-    .telegram-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #229ED9;
+    body {
+      background-color: #000;
       color: white;
-      padding: 12px 16px;
-      border-radius: 9999px;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      z-index: 50;
-      transition: transform 0.3s ease;
     }
-    .telegram-button:hover {
-      transform: scale(1.05);
-    }
-    .sparkle-on-hover {
-      transition: all 0.3s ease;
+    header {
       position: relative;
+      background-color: #000;
     }
-    .sparkle-on-hover::after {
-      content: '';
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .spark {
       position: absolute;
-      top: -10%;
-      left: -10%;
-      width: 120%;
-      height: 120%;
-      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, gold, rgba(255,255,255,0));
       opacity: 0;
-      transform: scale(0);
+      transition: all 0.3s ease;
       pointer-events: none;
-      transition: all 0.4s ease;
+      z-index: 10;
     }
-    .sparkle-on-hover:hover::after {
+    .logo-wrapper:hover .spark {
       opacity: 1;
-      transform: scale(1.5);
-      animation: sparkle 0.6s ease forwards;
+      transform: translate(-50%, -50%) scale(2);
     }
-    @keyframes sparkle {
-      0% {
-        transform: scale(1.5) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(2) rotate(360deg);
-        opacity: 0;
-      }
+    footer {
+      background-color: #000;
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 dark:bg-black dark:text-white">
+<body class="text-white">
 
-  <!-- Theme Toggle -->
-  <div class="flex justify-end p-4">
-    <button onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded shadow">🌓 Toggle Theme</button>
+<header class="py-6 text-center">
+  <div class="logo-wrapper">
+    <img src="images/logo.png" alt="CXP Logo" class="mx-auto w-32 h-32" />
+    <div class="spark"></div>
   </div>
+  <h1 class="text-4xl font-bold mt-2">ColsenX (CXP)</h1>
+  <p class="text-gray-400">Empowering Lifestyle, Travel & Creators via Web3</p>
 
-  <!-- Hero Section -->
- <header class="bg-black text-white p-8 text-center fade-in">
-  <div class="relative inline-block group">
-    <!-- Logo Image -->
-    <img src="images/logo.png" alt="ColsenX Logo"
-         class="mx-auto h-24 mb-4 transition-transform duration-300 group-hover:scale-110 relative z-10">
-
-    <!-- Avengers-Style Sparkburst -->
-    <svg class="absolute top-0 left-0 w-full h-full z-50 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100" viewBox="0 0 100 100">
-      <!-- White Core Flash -->
-      <circle cx="50" cy="50" r="5" fill="white">
-        <animate attributeName="r" values="5;60" dur="0.4s" begin="mouseover" fill="freeze" />
-        <animate attributeName="opacity" values="1;0" dur="0.4s" begin="mouseover" fill="freeze" />
-      </circle>
-
-      <!-- Gold Shockwave -->
-      <circle cx="50" cy="50" r="5" fill="gold">
-        <animate attributeName="r" values="5;45" dur="0.4s" begin="mouseover" fill="freeze" />
-        <animate attributeName="opacity" values="1;0" dur="0.4s" begin="mouseover" fill="freeze" />
-      </circle>
-
-      <!-- Silver Sparks -->
-      <circle cx="50" cy="50" r="2" fill="silver">
-        <animate attributeName="cx" values="50;80" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;30" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
-      </circle>
-
-      <circle cx="50" cy="50" r="2" fill="silver">
-        <animate attributeName="cx" values="50;25" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;75" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
-      </circle>
-
-      <circle cx="50" cy="50" r="2" fill="silver">
-        <animate attributeName="cx" values="50;65" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;20" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
-      </circle>
-    </svg>
+  <div class="flex flex-wrap justify-center gap-4 mt-6">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" 
+       target="_blank" 
+       class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded">
+      Buy on PancakeSwap
+    </a>
+    <a href="https://web3.okx.com/token/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" 
+       target="_blank" 
+       class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded">
+      View on OKX
+    </a>
+    <a href="https://t.me/Colsenxx" 
+       target="_blank" 
+       class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+      Join Telegram
+    </a>
   </div>
-
-  <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
-  <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
 </header>
 
+<section class="mt-10 px-4 text-center max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">📊 Tokenomics</h2>
+  <p class="text-gray-300 mb-6">Max Supply: 30,000,000 CXP<br/>Decimals: 10</p>
+</section>
 
-  <!-- Popup Alert -->
-  <div class="popup">🔥 New Listing Coming Soon!</div>
+<section class="mt-10 px-4 text-center max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">🚀 Roadmap</h2>
+  <ul class="text-gray-300 list-disc list-inside space-y-2">
+    <li>Q3 2025 – Launch CXP on BSC & Polygon</li>
+    <li>Q4 2025 – Launch ColsenLite Wallet</li>
+    <li>Q1 2026 – CXP Listed on CEX & Partnerships</li>
+  </ul>
+</section>
 
-  <!-- Language Switch -->
-  <div class="flex justify-end px-4 mt-2 text-sm space-x-2">
-    <button onclick="switchLang('en')" class="underline">🇺🇸 English</button>
-    <button onclick="switchLang('ph')" class="underline">🇵🇭 Filipino</button>
-  </div>
+<section class="mt-10 px-4 text-center max-w-4xl mx-auto">
+  <h2 class="text-xl font-semibold mb-2">📧 Stay Updated</h2>
+  <p class="text-gray-400">Subscribe to receive news, listings, and updates about CXP.</p>
 
-  <!-- Buy Buttons -->
-<div class="flex flex-wrap justify-center gap-4 mt-6">
-<a href="https://t.me/Colsenxx" 
-   target="_blank" 
-   class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-  Join Telegram
-</a>
+  <form action="https://formspree.io/f/mvgqpbdb" method="POST" class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-2">
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your email" 
+      required 
+      class="p-2 rounded w-64 text-black" />
 
+    <button 
+      type="submit" 
+      class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+      Subscribe
+    </button>
+  </form>
+</section>
 
-  <!-- Live Ticker -->
-  <section class="bg-gray-900 py-4 text-center fade-in delay-2">
-    <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark" height="100" width="100%" style="border:0; border-radius: 12px; overflow:hidden;" allowfullscreen></iframe>
-  </section>
-
-  <!-- Live Chart -->
-  <section class="bg-gray-900 py-6 fade-in delay-2">
-    <div class="max-w-5xl mx-auto">
-      <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23?theme=dark" height="500" width="100%" style="border:0; border-radius: 12px; overflow:hidden;" allowfullscreen></iframe>
-    </div>
-  </section>
-  <!-- Tokenomics -->
-  <section class="py-12 bg-white dark:bg-gray-800 text-center fade-in delay-3">
-    <h2 class="text-2xl font-bold mb-4">Tokenomics</h2>
-    <p>Total Supply: <strong>30,000,000 CXP</strong></p>
-    <ul class="mt-6 space-y-1 text-gray-700 dark:text-gray-300">
-      <li>🧑‍💻 10% Team</li>
-      <li>💧 40% Liquidity</li>
-      <li>🌐 30% Community</li>
-      <li>📢 20% Marketing</li>
-    </ul>
-  </section>
-
-  <!-- CXP Utility -->
-  <section class="py-12 px-4 bg-white dark:bg-black fade-in delay-2">
-    <h2 class="text-2xl font-bold text-center mb-6">CXP Utility</h2>
-    <ul class="max-w-3xl mx-auto space-y-2 text-gray-700 dark:text-gray-300">
-      <li>✅ Pay for travel, hotels, and transport in partner networks</li>
-      <li>✅ Tip and support creators directly with CXP</li>
-      <li>✅ Trade and swap across Web3 wallets and DEXs</li>
-      <li>✅ Use CXP in lifestyle-focused mobile apps like ColsenLite</li>
-    </ul>
-  </section>
-
-  <!-- Roadmap -->
-  <section class="py-12 px-6 bg-gray-100 dark:bg-gray-800 fade-in delay-3">
-    <h2 class="text-2xl font-bold text-center mb-6">Roadmap</h2>
-    <div class="max-w-4xl mx-auto space-y-4">
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q2 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>✅ Launch on BSC & Polygon</li>
-          <li>✅ Token verified and added on PancakeSwap</li>
-        </ul>
-      </div>
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q3 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>Telegram bot alerts with price tracking</li>
-          <li>Integrate with payment gateways</li>
-        </ul>
-      </div>
-      <div class="bg-white dark:bg-black p-4 rounded shadow">
-        <strong>Q4 2025</strong>
-        <ul class="list-disc ml-6">
-          <li>CEX Listings (targeting Bybit, Bitget)</li>
-          <li>Launch partnerships with travel & lifestyle brands</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust & Community -->
-  <section class="py-12 px-6 bg-white dark:bg-black fade-in delay-2">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Trust & Community</h2>
-      <div class="flex justify-center items-center space-x-2 mb-3">
-        <span class="bg-yellow-300 text-black px-3 py-1 rounded-full text-sm font-semibold shadow">
-          🔒 Audit Pending – CertiK or SolidProof
-        </span>
-      </div>
-      <p class="mb-2">
-        ✅ <strong>Ownership Renounced:</strong> Contract ownership fully renounced on BSC.
-        <a href="https://bscscan.com/token/0x1B4454865143610Fbf51B1cf385Ab58047F25c23#readContract" target="_blank" class="text-blue-600 underline">View on BscScan</a>
-      </p>
-      <p class="mb-4">📈 Community: 1,200+ Telegram users, 3,500+ followers on X</p>
-    </div>
-  </section>
-  <!-- Newsletter Opt-in -->
-  <section class="bg-gray-100 dark:bg-gray-900 py-10 px-4 text-center">
-    <h2 class="text-xl font-bold mb-4">📧 Stay Updated</h2>
-    <p class="mb-4 text-gray-700 dark:text-gray-300">Subscribe to receive news, listings, and updates about CXP.</p>
- <form action="https://formspree.io/f/mvgqpbdb" method="POST" class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-2">
-  <input 
-    type="email" 
-    name="email" 
-    placeholder="Your email" 
-    required 
-    class="p-2 rounded w-64 text-black" />
-
-  <button 
-    type="submit" 
-    class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-    Subscribe
-  </button>
-</form>
-
-
-  <!-- Footer -->
-  <footer class="bg-black text-white py-4 text-center text-sm">
-    © 2025 ColsenX. All rights reserved.
-  </footer>
-
-  <!-- Telegram Floating Button -->
- <a href="https://t.me/Colsenxx" target="_blank">
-  <img src="images/telegram-icon.png" alt="Telegram" class="h-6 inline ml-2">
-</a>
-
-
-  <!-- Scripts -->
-  <script>
-    setTimeout(() => {
-      const popup = document.querySelector('.popup');
-      if (popup) popup.remove();
-    }, 5000);
-
-    function switchLang(lang) {
-      alert(lang === 'en' ? 'Language set to English 🇺🇸' : 'Wika itinakda sa Filipino 🇵🇭');
-    }
-  </script>
+<footer class="mt-16 py-6 text-center">
+  <p class="text-sm text-gray-500">© 2025 ColsenX. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
