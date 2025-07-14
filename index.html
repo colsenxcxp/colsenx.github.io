@@ -5,30 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ColsenX (CXP) Official</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Staggered animation delays */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+  </style>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
-  <header class="bg-gray-100 p-6 shadow-md flex flex-col items-center">
-    <img src="images/logo.png" alt="ColsenX Logo" class="h-24 mb-2">
+  <header class="bg-black p-6 shadow-md flex flex-col items-center text-white">
+    <img src="images/logo.png" alt="ColsenX Logo" class="h-24 mb-4">
     <h1 class="text-2xl font-bold">ColsenX (CXP)</h1>
-    <p class="text-sm text-gray-600">Web3 for lifestyle, trading, travel, and creators.</p>
+    <p class="text-sm text-gray-300">Web3 for lifestyle, trading, travel, and creators.</p>
   </header>
 
   <!-- Buy Buttons -->
-  <section class="bg-white py-4 flex justify-center space-x-3">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="px-3 py-1.5 bg-yellow-400 text-white text-sm rounded shadow hover:scale-105 transform transition">Buy on PancakeSwap</a>
-    <a href="https://web3.okx.com/token/bsc/0x1b4454865143610fbf51b1cf385ab58047f25c23" target="_blank" class="px-3 py-1.5 bg-blue-500 text-white text-sm rounded shadow hover:scale-105 transform transition">View on OKX</a>
+  <section class="bg-white py-6 fade-in delay-1">
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-4">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0x1B4454865143610Fbf51B1cf385Ab58047F25c23&inputCurrency=0x55d398326f99059fF775485246999027B3197955" target="_blank" class="px-4 py-2 bg-yellow-400 text-white text-sm rounded shadow hover:scale-105 transform transition">Buy on PancakeSwap</a>
+      <a href="https://web3.okx.com/token/bsc/0x1b4454865143610fbf51b1cf385ab58047f25c23" target="_blank" class="px-4 py-2 bg-blue-500 text-white text-sm rounded shadow hover:scale-105 transform transition">View on OKX</a>
+    </div>
   </section>
 
   <!-- Live Chart -->
-  <section class="bg-gray-900 py-6">
+  <section class="bg-gray-900 py-6 fade-in delay-2">
     <div class="max-w-5xl mx-auto">
       <iframe src="https://dexscreener.com/bsc/0x1B4454865143610Fbf51B1cf385Ab58047F25c23" height="500" class="w-full rounded-lg"></iframe>
     </div>
   </section>
 
   <!-- Tokenomics -->
-  <section class="py-12 bg-gray-50 text-center">
+  <section class="py-12 bg-gray-50 text-center fade-in delay-3">
     <h2 class="text-2xl font-bold mb-4">Tokenomics</h2>
     <p>Total Supply: <strong>30,000,000 CXP</strong></p>
     <div class="mt-6">
@@ -43,7 +64,7 @@
   </section>
 
   <!-- Utility -->
-  <section class="py-12 px-4 bg-white">
+  <section class="py-12 px-4 bg-white fade-in delay-2">
     <h2 class="text-2xl font-bold text-center mb-6">CXP Utility</h2>
     <ul class="max-w-3xl mx-auto space-y-2 text-gray-700">
       <li>✅ Pay for travel, hotels, and transport in partner networks</li>
@@ -54,7 +75,7 @@
   </section>
 
   <!-- Roadmap -->
-  <section class="py-12 px-6 bg-gray-100">
+  <section class="py-12 px-6 bg-gray-100 fade-in delay-3">
     <h2 class="text-2xl font-bold text-center mb-6">Roadmap</h2>
     <div class="max-w-4xl mx-auto space-y-4">
       <div class="bg-white p-4 rounded shadow">
@@ -82,7 +103,7 @@
   </section>
 
   <!-- Trust & Community -->
-  <section class="py-12 px-6 bg-white">
+  <section class="py-12 px-6 bg-white fade-in delay-2">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-2xl font-bold mb-4">Trust & Community</h2>
       <p class="mb-2">🔒 Audit Pending – to be published by CertiK or SolidProof</p>
