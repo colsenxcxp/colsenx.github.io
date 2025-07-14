@@ -95,31 +95,57 @@
   <!-- Hero Section -->
  <header class="bg-black text-white p-8 text-center fade-in">
   <div class="relative inline-block group">
+    <!-- Logo Image -->
     <img src="images/logo.png" alt="ColsenX Logo"
          class="mx-auto h-24 mb-4 transition-transform duration-300 group-hover:scale-110 relative z-10">
 
-    <!-- STRONG FORGE-LIKE SPARK -->
-    <svg class="absolute top-0 left-0 w-full h-full z-20 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 opacity-0" viewBox="0 0 100 100">
-      <!-- Big flash -->
-      <circle cx="50" cy="50" r="5" fill="gold">
+    <!-- INTENSE IRON-MAN STYLE SPARK -->
+    <svg class="absolute top-0 left-0 w-full h-full z-30 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100" viewBox="0 0 100 100">
+      <!-- Central Flash Core -->
+      <circle cx="50" cy="50" r="5" fill="white">
         <animate attributeName="r" values="5;60" dur="0.4s" begin="mouseover" fill="freeze" />
         <animate attributeName="opacity" values="1;0" dur="0.4s" begin="mouseover" fill="freeze" />
       </circle>
 
-      <!-- Sparks -->
-      <circle cx="50" cy="50" r="2" fill="gold">
+      <!-- Golden Shockwave -->
+      <circle cx="50" cy="50" r="5" fill="gold" opacity="0.8">
+        <animate attributeName="r" values="5;45" dur="0.4s" begin="mouseover" fill="freeze" />
+        <animate attributeName="opacity" values="0.8;0" dur="0.4s" begin="mouseover" fill="freeze" />
+      </circle>
+      <!-- Silver Sparks -->
+      <circle cx="50" cy="50" r="1.5" fill="silver">
         <animate attributeName="cx" values="50;80" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;20" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;30" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
       </circle>
-      <circle cx="50" cy="50" r="2" fill="gold">
-        <animate attributeName="cx" values="50;25" dur="0.3s" begin="mouseover" fill="freeze"/>
+
+      <circle cx="50" cy="50" r="1.5" fill="silver">
+        <animate attributeName="cx" values="50;20" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;60" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
+      </circle>
+
+      <circle cx="50" cy="50" r="1.5" fill="silver">
+        <animate attributeName="cx" values="50;65" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="cy" values="50;75" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
       </circle>
-      <circle cx="50" cy="50" r="2" fill="gold">
-        <animate attributeName="cx" values="50;65" dur="0.3s" begin="mouseover" fill="freeze"/>
-        <animate attributeName="cy" values="50;60" dur="0.3s" begin="mouseover" fill="freeze"/>
+
+      <circle cx="50" cy="50" r="1.5" fill="silver">
+        <animate attributeName="cx" values="50;70" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;20" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
+      </circle>
+
+      <circle cx="50" cy="50" r="1.5" fill="silver">
+        <animate attributeName="cx" values="50;30" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;80" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
+      </circle>
+
+      <circle cx="50" cy="50" r="1.5" fill="silver">
+        <animate attributeName="cx" values="50;55" dur="0.3s" begin="mouseover" fill="freeze"/>
+        <animate attributeName="cy" values="50;15" dur="0.3s" begin="mouseover" fill="freeze"/>
         <animate attributeName="opacity" values="1;0" dur="0.3s" begin="mouseover" fill="freeze"/>
       </circle>
     </svg>
@@ -128,7 +154,6 @@
   <h1 class="text-3xl font-bold">ColsenX (CXP)</h1>
   <p class="text-gray-400 mt-2">Web3 for lifestyle, trading, travel, and creators.</p>
 </header>
-
 
   <!-- Popup Alert -->
   <div class="popup">🔥 New Listing Coming Soon!</div>
